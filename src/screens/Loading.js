@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 import styles from '../assets/stylesheets';
 import { getUserTokenFromStorage } from '../api/utils';
+import SCREENS from '../constants/screens'
 
 class Loading extends Component {
   componentWillMount() {
@@ -14,7 +15,7 @@ class Loading extends Component {
 
   checkForLoggedUser = async () => {
     const userToken = await getUserTokenFromStorage();
-    this.props.navigation.navigate(userToken ? 'App' : 'Login');
+    this.props.navigation.navigate(userToken ? SCREENS.DASHBOARD : SCREENS.AUTH);
   };
 
   render() {

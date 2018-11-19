@@ -1,6 +1,6 @@
 export default {
   LOADING: 'Loading',
-  LOGIN: 'Login',
+  AUTH: 'Auth',
   DASHBOARD: 'Dashboard',
   CREATE_USER: 'CreateUser',
   ADDGAME: 'AddGame',

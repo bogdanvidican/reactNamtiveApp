@@ -1,20 +1,10 @@
 import { createSwitchNavigator, createStackNavigator } from 'react-navigation';
-import Account from './screens/Account';
 import Dashboard from './screens/Dashboard';
 import Login from './screens/Login';
 import CreateUser from './screens/CreateUser';
 import Loading from './screens/Loading';
 
-const AppStack = createStackNavigator(
-  {
-    Dashboard,
-    Account,
-  },{
-    navigationOptions:{ header: null }
-  }
-);
-
-const LoginStack = createStackNavigator(
+const AuthStack = createStackNavigator(
   {
     Login,
     CreateUser
@@ -23,11 +13,11 @@ const LoginStack = createStackNavigator(
 
 export default createSwitchNavigator(
   {
-    AuthLoading: Loading,
-    Dashboard: AppStack,
-    Login: LoginStack,
+    Loading,
+    Dashboard,
+    Auth: AuthStack,
   },
   {
-    initialRouteName:  'AuthLoading'
+    initialRouteName:  'Loading'
   }
 );

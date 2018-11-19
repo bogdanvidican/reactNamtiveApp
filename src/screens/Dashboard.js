@@ -20,7 +20,7 @@ const AccountStack = createStackNavigator({
 export default createBottomTabNavigator(
   {
     Dashboard,
-    Account,
+    Account: AccountStack,
   },
   {
     navigationOptions: ({ navigation }) => ({
