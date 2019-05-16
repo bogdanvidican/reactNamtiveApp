@@ -1,4 +1,4 @@
-# reactNamtiveApp
+# reactNativeApp
 
 1. yarn install
 2. react-native run-ios // xcode && iosimultor installed with all dependencies needed
